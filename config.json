@@ -1,0 +1,12 @@
+{
+    "emotions": {
+        "01": "Neutral",
+        "03": "Happy",
+        "04": "Sad",
+        "05": "Angry"
+    },
+    "sample_rate": 16000,
+    "mfcc_features": 40,
+    "total_features": 80,
+    "model": "Random Forest"
+}
