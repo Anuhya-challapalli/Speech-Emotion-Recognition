@@ -15,7 +15,7 @@ The model classifies four emotions:
 
 Try the application here:
 
-[Open Speech Emotion Recognition App](PASTE YOUR STREAMLIT APP LINK HERE)
+https://speech-emotion-recognition-bqvr8ysmolq3qbpfz7iuvn.streamlit.app/
 
 Upload a WAV audio recording and click Detect Emotion to get a prediction.
 
