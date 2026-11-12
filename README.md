@@ -1,87 +1,113 @@
-Speech Emotion Recognition Using Machine Learning
+🎙️ Speech Emotion Recognition
 
 Project Overview
 
-Speech Emotion Recognition (SER) is a machine learning project that predicts emotions from human speech recordings using audio signal processing and classification techniques.
+Speech Emotion Recognition is a machine learning project that identifies emotions from human speech recordings. It analyzes audio features and predicts the emotion expressed in the voice.
 
-This project uses MFCC (Mel-Frequency Cepstral Coefficients) features to extract useful information from speech signals and a Random Forest Classifier to predict emotions.
-
-Emotions Detected
+The model classifies four emotions:
 
 - Neutral
 - Happy
 - Sad
 - Angry
 
-Technologies Used
+🚀 Live Demo
+
+Try the application here:
+
+[Open Speech Emotion Recognition App](PASTE YOUR STREAMLIT APP LINK HERE)
+
+Upload a WAV audio recording and click Detect Emotion to get a prediction.
+
+🎯 Problem Statement
+
+Understanding emotions in speech can help improve human-computer interaction. This project explores how machine learning can identify emotional patterns from voice recordings.
+
+🛠️ Technologies Used
 
 - Python
-- Google Colab
 - Librosa
 - NumPy
 - Pandas
 - Scikit-learn
 - Matplotlib
+- Streamlit
+- Joblib
 
-Dataset
+📂 Dataset
 
-This project uses the RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song) dataset.
+RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)
 
-Only speech recordings belonging to four selected emotion categories are used.
+This project uses the speech portion of the RAVDESS dataset, containing recordings from different actors.
 
-Dataset source: https://zenodo.org/records/11063852
-
-Project Workflow
+⚙️ Project Workflow
 
 1. Download and load the speech dataset.
-2. Select four emotion categories.
-3. Extract 40 MFCC coefficients from each audio recording.
-4. Calculate mean and standard deviation to create 80 features.
-5. Split the dataset into training and testing sets using actor-based splitting.
-6. Train a Random Forest Classifier.
-7. Evaluate the model using accuracy, classification report and confusion matrix.
-8. Predict emotions from audio recordings.
+2. Extract audio features using MFCC (Mel-Frequency Cepstral Coefficients).
+3. Calculate mean and standard deviation of the extracted features.
+4. Train a Random Forest classification model.
+5. Evaluate the model using accuracy and a confusion matrix.
+6. Save the trained model.
+7. Build a Streamlit application for audio uploads and emotion prediction.
 
-Machine Learning Algorithm
+📊 Model Performance
 
-Random Forest Classifier
+- Algorithm: Random Forest Classifier
+- Number of MFCC features: 40
+- Extracted statistical features: 80
+- Test accuracy: 54.17%
 
-Model Evaluation
+Note: The model is an experimental baseline and may produce incorrect predictions, especially for voices or recording conditions different from the training dataset.
 
-The model is evaluated using:
+🖥️ Application Features
 
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
+- Upload WAV audio recordings.
+- Play the uploaded recording.
+- Predict one of four emotions.
+- Display the model's prediction confidence.
 
-Project Files
+📁 Project Structure
 
-- "Speech_Emotion_Recognition.ipynb" – Complete project implementation.
-- "speech_emotion_model.pkl" – Trained machine learning model.
-- "config.json" – Model configuration and emotion labels.
+Speech-Emotion-Recognition/
+│
+├── README.md
+├── Speech_Emotion_Recognition.ipynb
+├── app.py
+├── config.json
+├── requirements.txt
+└── speech_emotion_model.pkl
 
-How to Run
+▶️ How to Run Locally
 
-1. Open Google Colab.
-2. Upload the project notebook.
-3. Install the required libraries.
-4. Download and extract the RAVDESS dataset.
-5. Run the notebook cells in order.
-6. Train the model and test emotion predictions.
+1. Clone the repository:
 
-Limitations
+git clone https://github.com/Anuhya-challapalli/Speech-Emotion-Recognition.git
 
-- Emotion predictions are not always accurate.
-- Voice characteristics differ between individuals.
-- The model is trained on a limited selection of emotions.
-- Predictions should not be treated as definitive assessments of a person's feelings.
+2. Open the project folder:
 
-Author
+cd Speech-Emotion-Recognition
+
+3. Install the dependencies:
+
+pip install -r requirements.txt
+
+4. Run the application:
+
+streamlit run app.py
+
+🔮 Future Improvements
+
+- Improve model accuracy.
+- Support additional audio formats.
+- Explore deep learning models.
+- Improve performance on real-world voice recordings.
+
+👩‍💻 Author
 
 Anuhya Challapalli
 
-Project Type
+GitHub: "Anuhya-challapalli" (https://github.com/Anuhya-challapalli)
 
-Machine Learning | Data Science | Audio Processing
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
